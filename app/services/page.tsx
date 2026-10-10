@@ -11,7 +11,7 @@ const services = [
   {
     number: '01',
     title: 'Discovery & Systems Assessment',
-    subtitle: 'Start here when you know something needs to improve but aren't yet sure what to change.',
+    subtitle: 'Start here when you know something needs to improve but aren\'t yet sure what to change.',
     description: 'Clarify the real problem, understand the current state, and identify the next best move before committing to build.',
     includes: [
       'Review of goals, users, workflows, systems, and constraints',
