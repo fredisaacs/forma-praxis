@@ -1,3 +1,12 @@
+import Header from '@/app/components/Header';
+import Footer from '@/app/components/Footer';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Home | Forma Praxis',
+  description: 'Forma Praxis helps businesses understand how systems work, define better next steps, and turn analysis into practical design and delivery.',
+};
+
 const services = [
   {
     title: 'Discovery & systems assessment',
@@ -86,26 +95,7 @@ const stack = [
 export default function HomePage() {
   return (
     <>
-      <header className="topbar">
-        <div className="container nav-wrap">
-          <a href="#home" className="brand" aria-label="Forma Praxis home">
-            <span className="brand-mark">FP</span>
-            <span className="brand-text">Forma Praxis</span>
-          </a>
-
-          <nav className="main-nav" aria-label="Main navigation">
-            <a href="#home">Home</a>
-            <a href="#services">Services</a>
-            <a href="#process">How we work</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-          </nav>
-
-          <a href="#contact" className="button button-primary">
-            Start a conversation
-          </a>
-        </div>
-      </header>
+      <Header />
 
       <main id="home">
         <section className="hero">
@@ -122,10 +112,10 @@ export default function HomePage() {
               </p>
 
               <div className="cta-row">
-                <a href="#contact" className="button button-primary">
+                <a href="/contact" className="button button-primary">
                   Book a discovery call
                 </a>
-                <a href="#services" className="button button-secondary">
+                <a href="/services" className="button button-secondary">
                   View services
                 </a>
               </div>
@@ -256,13 +246,15 @@ export default function HomePage() {
               <a href="mailto:hello@formapraxis.co" className="button button-primary">
                 hello@formapraxis.co
               </a>
-              <a href="#home" className="button button-secondary">
+              <a href="/" className="button button-secondary">
                 Back to top
               </a>
             </div>
           </div>
         </section>
       </main>
+
+      <Footer />
     </>
   );
 }
